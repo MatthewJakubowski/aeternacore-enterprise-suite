@@ -6,6 +6,7 @@
 [![Standard: PN-EN ISO 15189](https://img.shields.io/badge/Standard-PN--EN_ISO_15189:2023-10b981)](https://www.iso.org/standard/76677.html)
 [![Interoperability: HL7 FHIR R4](https://img.shields.io/badge/Interoperability-HL7_FHIR_R4-f59e0b)](https://hl7.org/fhir/R4/)
 [![Compliance: EU AI Act & GDPR](https://img.shields.io/badge/Compliance-EU_AI_Act_%7C_GDPR-6366f1)](#-regulatory-legal--eu-ai-act-compliance)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-38bdf8.svg?logo=python&logoColor=white)](#)
 
 ---
 
@@ -74,6 +75,7 @@ Unlike generic sandbox calculators, **AeternaCore Enterprise** implements hard l
 
 Mateusz (Matthew) Jakubowski is an Experimental Biologist (M.Sc.) and Senior Medical Laboratory Technologist with over 15 years of continuous diagnostic laboratory practice at a regional clinical network. Combining laboratory bench mastery with postgraduate studies in clinical trial management and over 100 professional credentials (Stanford, Wharton, Oxford, Cambridge, Google, IBM), Mateusz operates as a Bridge Builder:
 
+> 🚀 **Live Production Application:** [https://aeternacore-enterprise-suite.streamlit.app](https://aeternacore-enterprise-suite.streamlit.app)
 * **Brand:** `#FromPipetteToPython` | `#BuildInPublic`
 * **Official Portfolio:** [mateusz-jakubowski.ai.studio](https://mateusz-jakubowski.ai.studio)
 * **Philosophy:** Clean code, explainable machine learning over black boxes, and unwavering humility before biological data.
