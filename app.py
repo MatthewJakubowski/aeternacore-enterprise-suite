@@ -284,11 +284,15 @@ with tab_ode:
     fig_ode.add_trace(go.Scatter(x=t_ode, y=crp_traj, name="hsCRP [mg/L]", line=dict(color="#ef4444", width=2)))
     fig_ode.add_trace(go.Scatter(x=t_ode, y=glu_traj, name=t['ode_glu'], line=dict(color="#0284c7", width=2), yaxis="y2"))
     fig_ode.update_layout(
-        title=f"<b>{t['ode_title']}</b>", template="plotly_dark",
+        title=f"<b>{t['ode_title']}</b>",
+        template="plotly_dark",
         xaxis=dict(title="Miesiące / Months"),
-        yaxis=dict(title="hsCRP [mg/L]", titlefont=dict(color="#ef4444"), tickfont=dict(color="#ef4444")),
-        yaxis2=dict(title=t['ode_glu'], titlefont=dict(color="#0284c7"), tickfont=dict(color="#0284c7"), overlaying="y", side="right"),
-        height=350, margin=dict(l=40, r=40, t=50, b=40), paper_bgcolor="rgba(0,0,0,0)", legend=dict(orientation="h", y=-0.2)
+        yaxis=dict(title=dict(text="hsCRP [mg/L]", font=dict(color="#ef4444")), tickfont=dict(color="#ef4444")),
+        yaxis2=dict(title=dict(text=t['ode_glu'], font=dict(color="#0284c7")), tickfont=dict(color="#0284c7"), overlaying="y", side="right"),
+        height=350,
+        margin=dict(l=40, r=40, t=50, b=40),
+        paper_bgcolor="rgba(0,0,0,0)",
+        legend=dict(orientation="h", y=-0.2)
     )
     st.plotly_chart(fig_ode, use_container_width=True)
 
