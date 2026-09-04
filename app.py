@@ -78,7 +78,6 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-# Panel boczny z laboratoryjnymi przypadkami brzegowymi
 with st.sidebar:
     st.header("🎛 " + ("Dane Laboratoryjne" if lang == "PL" else "Lab Data Matrix"))
     preset = st.selectbox(
@@ -168,7 +167,6 @@ profile = CompleteLabProfile(
 
 res = BiostatisticalClinicalEngine.evaluate_all(profile, lang=lang)
 
-# Karty wskaźników KPI
 kpi_cols = st.columns(5)
 with kpi_cols[0]:
     delta_color = "#4ade80" if res['age_delta'] <= 0 else "#f87171"
@@ -185,7 +183,6 @@ with kpi_cols[4]:
 
 st.write("")
 
-# Zakładki Systemowe
 tab_sum, tab_shap, tab_recs, tab_iso, tab_mc, tab_ode, tab_exp, tab_story, tab_law = st.tabs([
     t["tab_summary"], t["tab_shap"], t["tab_protocols"], t["tab_iso"],
     t["tab_mc"], t["tab_ode"], t["tab_interop"], t["tab_story"], t["tab_compliance"]
@@ -317,38 +314,7 @@ with tab_exp:
         st.code(fhir_data, language="json")
 
 with tab_story:
-    st.markdown("""
-    ### 🌉 A Bridge Between Two Worlds
-    *A pragmatic story of data, biology, and humility — #FromPipetteToPython*
-
-    > *"Don't use AI to skip learning, use AI to accelerate it."* — **Mateusz Jakubowski**
-
-    ---
-
-    #### 1. Impulse and the Decision to Understand
-    Working as a senior laboratory technologist, backed by an education in experimental biology and postgraduate studies in clinical trial management, teaches you one fundamental thing: **respect for procedures and vigilance against anomalies**. In this world, every decision must have a clear, verifiable justification.
-    
-    When generative AI emerged, Mateusz explored tools like Google Gemini, NotebookLM, and Vertex AI. However, 'vibe coding' without deep understanding was unsatisfactory for a scientific mind. A conscious choice was made: **master the fundamentals of Python from scratch**, building an engineering library and learning the core math behind the code.
-
-    #### 2. Acceleration, Not Shortcuts (#BuildInPublic)
-    Adopting the **Human-in-the-Loop** philosophy, Mateusz completed over 100 verified certificates and specializations (Google, Stanford, Wharton, Oxford, Cambridge, IBM), methodically translating theory into Python libraries: NumPy, Pandas, Scikit-Learn, and SciPy.
-    
-    In medical diagnostics, there is no place for unexplainable 'Black Boxes' — therefore, **classical, interpretable Machine Learning (XAI) is the absolute foundation**.
-
-    #### 3. Everyday Architecture and Life Balance
-    Balance is maintained through intentional structure:
-    * 🏡 **Management:** Managing the complete construction of his own home during the COVID-19 pandemic.
-    * 🏛 **Civic Duty:** Serving as an elected District Councillor (Osiedle Wilkowyja, Rzeszów).
-    * 🌱 **Garden & Soil:** Cultivating ornamental and edible plants, grounding the mind away from screens.
-    * 🏋️ **Physical Discipline:** Consistent strength training as a biological counterbalance.
-    * 🍷 **Wine Analytics:** Over 1,000 analytical reviews on Vivino.
-    * 🎨 **Aesthetics:** Harmonizing traditional art painted by his mother with modern digital spaces.
-
-    #### 4. The Bridge Builder Vision
-    The ambition is not to be a routine coder, but a **Bridge Builder** — translating the language of laboratory medicine and experimental biology into production-grade, mathematically sound data architectures.
-
-    🌐 **Official Web Showcase:** [mateusz-jakubowski.ai.studio](https://mateusz-jakubowski.ai.studio/)
-    """)
+    st.markdown(t["story_text"])
 
 with tab_law:
     st.markdown(t["disclaimer_text"])
