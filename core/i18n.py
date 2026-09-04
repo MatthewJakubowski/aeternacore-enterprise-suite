@@ -12,7 +12,7 @@ I18N = {
         "tab_mc": "📈 Trajektoria Monte Carlo",
         "tab_ode": "🧪 Kinetyka Bio-ODE",
         "tab_interop": "💾 Interoperacyjność & Raport PDF",
-        "tab_story": "🌉 Story: Bridge Builder",
+        "tab_story": "🌉 Story: Most Między Światami",
         "tab_compliance": "⚖️ Kwestie Prawne i AI Act",
 
         "lbl_pheno": "PhenoAge (Levine)",
@@ -40,6 +40,39 @@ I18N = {
         "mc_pas": "Trajektoria Pasywna (Brak Działań)",
         "ode_title": "Kinetyka Równań Różniczkowych (Bio-ODE): hsCRP vs Glikemia",
         "ode_glu": "Glukoza [mg/dL]",
+
+        "story_text": """
+### 🌉 Most Między Dwoma Światami (A Bridge Between Two Worlds)
+*Pragmatyczna historia danych, biologii i pokory wobec liczb — #FromPipetteToPython*
+
+> *"Nie używaj AI, aby uciec od nauki. Używaj AI, aby ją przyspieszyć."* — **Mateusz Jakubowski**
+
+---
+
+#### 1. Impuls i Decyzja o Zrozumieniu
+Praca starszego technologa laboratoryjnego, poparta wykształceniem z biologii eksperymentalnej oraz studiami podyplomowymi z koordynacji i zarządzania badaniami klinicznymi, uczy jednej fundamentalnej zasady: **bezwzględnego szacunku dla procedur i czujności wobec anomalii**. W tym świecie każda decyzja analityczna musi posiadać weryfikowalne, twarde uzasadnienie.
+
+Gdy nastała era generatywnej sztucznej inteligencji, naturalnym krokiem była eksploracja ekosystemu Google (Gemini, NotebookLM, Vertex AI, AI Studio). Jednak dla laboratoryjnego umysłu nawykłego do pełnej kontroli analitycznej, etap tzw. *vibe codingu* (kodu generowanego przez AI, którego struktury się w pełni nie rozumie) szybko przestał dawać satysfakcję. Zapadła decyzja: **opanować fundamenty inżynierii Pythona od zera**. Metodycznie zbudowana biblioteka literatury akademickiej i technicznej stała się bazą do zdobycia pełnej suwerenności myśli.
+
+#### 2. Akceleracja, a Nie Drogi na Skróty (#BuildInPublic)
+W myśl filozofii **Human-in-the-Loop**, Mateusz ukończył rygorystyczny program ponad 100 zweryfikowanych certyfikatów i specjalizacji wiodących światowych ośrodków (w tym Stanford, Wharton, Oxford, Cambridge, Google, IBM). 
+
+Wiedzę teoretyczną natychmiast przekuł w warsztat bibliotek numerycznych: **NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn i SciPy**. W diagnostyce medycznej nie ma miejsca na efekt czarnej skrzynki (*Black Box*) — dlatego priorytetem pozostaje **wyjaśnialne uczenie maszynowe (Explainable AI - XAI)** i audytowalna biostatystyka.
+
+#### 3. Życiowa Architektura i Pragmatyzm
+Równowaga życiowa opiera się na równie świadomych fundamentach:
+* 🏡 **Zarządzanie kryzysowe:** Samodzielne poprowadzenie budowy własnego domu od zera w trakcie pandemii COVID-19.
+* 🏛 **Służba publiczna:** Mandat Radnego Osiedla (Wilkowyja, Rzeszów) pełniony z zaufania lokalnej społeczności.
+* 🌱 **Ziemia i Ogród:** Uprawa roślin ozdobnych i jadalnych, która uczy biologicznej cierpliwości i odrywa wzrok od monitora.
+* 🏋️ **Dyscyplina fizyczna:** Regularny trening siłowy jako higiena układu ruchu i biologiczna przeciwwaga dla pracy siedzącej.
+* 🍷 **Analityka Wina:** Ponad 1000 autorskich, usystematyzowanych ocen na platformie Vivino.
+* 🎨 **Wrażliwość estetyczna:** Przestrzeń domowa łącząca tradycyjne malarstwo mamy z nowoczesną formą prezentacji sztuki cyfrowej.
+
+#### 4. Wizja: Budowniczy Mostów (Bridge Builder)
+Ambicją nie jest bycie odtwórczym koderem powtarzalnych skryptów. Ambicją jest rola **Budowniczego Mostów** — eksperta, który potrafi precyzyjnie przetłumaczyć język biologii medycznej i diagnostyki laboratoryjnej na język matematyki, algorytmów i architektury danych.
+
+🌐 **Oficjalna Witryna i Portfolio:** [mateusz-jakubowski.ai.studio](https://mateusz-jakubowski.ai.studio/)
+""",
 
         "disclaimer_text": """
 ### ⚖️ KLAUZULA REGULACYJNA, PRAWNA I OCHRONA DANYCH (PROOF-OF-CONCEPT)
@@ -93,6 +126,39 @@ Niniejsze oprogramowanie stanowi demonstrator technologiczny i badawczy (Proof-o
         "mc_pas": "Passive Drift",
         "ode_title": "Coupled Differential Kinetics (Bio-ODE): hsCRP & Glycemia",
         "ode_glu": "Glucose [mg/dL]",
+
+        "story_text": """
+### 🌉 A Bridge Between Two Worlds
+*A pragmatic story of data, biology, and humility — #FromPipetteToPython*
+
+> *"Don't use AI to skip learning, use AI to accelerate it."* — **Mateusz Jakubowski**
+
+---
+
+#### 1. Impulse and the Decision to Understand
+Working as a senior laboratory technologist, backed by an education in experimental biology and postgraduate studies in clinical trial management, teaches you one fundamental thing: **respect for procedures and vigilance against anomalies**. In this world, every decision must have a clear, verifiable justification.
+
+When generative AI emerged, Mateusz explored tools like Google Gemini, NotebookLM, and Vertex AI. However, 'vibe coding' without deep understanding was unsatisfactory for a scientific mind. A conscious choice was made: **master the fundamentals of Python from scratch**, building an engineering library and learning the core math behind the code.
+
+#### 2. Acceleration, Not Shortcuts (#BuildInPublic)
+Adopting the **Human-in-the-Loop** philosophy, Mateusz completed over 100 verified certificates and specializations (Google, Stanford, Wharton, Oxford, Cambridge, IBM), methodically translating theory into Python libraries: NumPy, Pandas, Scikit-Learn, and SciPy.
+
+In medical diagnostics, there is no place for unexplainable 'Black Boxes' — therefore, **classical, interpretable Machine Learning (XAI) is the absolute foundation**.
+
+#### 3. Everyday Architecture and Life Balance
+Balance is maintained through intentional structure:
+* 🏡 **Management:** Managing the complete construction of his own home during the COVID-19 pandemic.
+* 🏛 **Civic Duty:** Serving as an elected District Councillor (Osiedle Wilkowyja, Rzeszów).
+* 🌱 **Garden & Soil:** Cultivating ornamental and edible plants, grounding the mind away from screens.
+* 🏋️ **Physical Discipline:** Consistent strength training as a biological counterbalance.
+* 🍷 **Wine Analytics:** Over 1,000 analytical reviews on Vivino.
+* 🎨 **Aesthetics:** Harmonizing traditional art painted by his mother with modern digital spaces.
+
+#### 4. The Bridge Builder Vision
+The ambition is not to be a routine coder, but a **Bridge Builder** — translating the language of laboratory medicine and experimental biology into production-grade, mathematically sound data architectures.
+
+🌐 **Official Web Showcase:** [mateusz-jakubowski.ai.studio](https://mateusz-jakubowski.ai.studio/)
+""",
 
         "disclaimer_text": """
 ### ⚖️ REGULATORY, LEGAL & DATA PRIVACY COMPLIANCE (PROOF-OF-CONCEPT)
