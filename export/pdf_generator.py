@@ -1,15 +1,47 @@
 import io
 import math
+import urllib.request
+import os
 from typing import Dict
 from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from reportlab.graphics.shapes import Drawing, Rect, String, Line, Polygon, Circle
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from core.models import CompleteLabProfile
 
-FONT_NAME = "Helvetica"
-FONT_BOLD = "Helvetica-Bold"
+FONT_NAME = "DejaVuSans"
+FONT_BOLD = "DejaVuSans-Bold"
+
+def ensure_utf8_fonts():
+    """Gwarantuje obecność fontu DejaVuSans obsługującego pełny zestaw polskich znaków UTF-8."""
+    os.makedirs("fonts", exist_ok=True)
+    regular_path = os.path.join("fonts", "DejaVuSans.ttf")
+    bold_path = os.path.join("fonts", "DejaVuSans-Bold.ttf")
+
+    if not os.path.exists(regular_path):
+        url_reg = "https://github.com/dejavu-fonts/dejavu-fonts/raw/master/ttf/DejaVuSans.ttf"
+        urllib.request.urlretrieve(url_reg, regular_path)
+
+    if not os.path.exists(bold_path):
+        url_bld = "https://github.com/dejavu-fonts/dejavu-fonts/raw/master/ttf/DejaVuSans-Bold.ttf"
+        urllib.request.urlretrieve(url_bld, bold_path)
+
+    try:
+        pdfmetrics.registerFont(TTFont(FONT_NAME, regular_path))
+        pdfmetrics.registerFont(TTFont(FONT_BOLD, bold_path))
+    except Exception:
+        pass
+
+# Inicjalizacja czcionek UTF-8
+try:
+    ensure_utf8_fonts()
+except Exception:
+    FONT_NAME = "Helvetica"
+    FONT_BOLD = "Helvetica-Bold"
+
 
 def create_pdf_vector_shap(marginals: Dict, is_pl: bool) -> Drawing:
     sorted_items = sorted(marginals.items(), key=lambda x: abs(x[1]), reverse=True)[:8]
@@ -42,6 +74,7 @@ def create_pdf_vector_shap(marginals: Dict, is_pl: bool) -> Drawing:
 
     return d
 
+
 def create_pdf_vector_radar(res: Dict, is_pl: bool) -> Drawing:
     p: CompleteLabProfile = res["profile"]
     d = Drawing(540, 110)
@@ -72,7 +105,7 @@ def create_pdf_vector_radar(res: Dict, is_pl: bool) -> Drawing:
 
         lx = cx + (r_max + 14) * math.cos(angle)
         ly = cy + (r_max + 14) * math.sin(angle) - 2
-        d.add(String(lx - 12, ly, labels[i], fontName=FONT_NAME, fontSize=6.5, fillColor=colors.HexColor("#475569")))
+        d.add(String(lx - 14, ly, labels[i], fontName=FONT_NAME, fontSize=6.5, fillColor=colors.HexColor("#475569")))
 
         px = cx + (r_max * values[i]) * math.cos(angle)
         py = cy + (r_max * values[i]) * math.sin(angle)
@@ -80,6 +113,7 @@ def create_pdf_vector_radar(res: Dict, is_pl: bool) -> Drawing:
 
     d.add(Polygon(poly_points, fillColor=colors.HexColor("#0284c7"), strokeColor=colors.HexColor("#0369a1"), strokeWidth=1.2, fillOpacity=0.25))
     return d
+
 
 def generate_pdf_in_memory(res: Dict) -> bytes:
     p: CompleteLabProfile = res["profile"]
