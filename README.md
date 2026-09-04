@@ -2,6 +2,7 @@
 > **A Bridge Between Two Worlds: From the Laboratory Pipette to Explainable Health Intelligence.**
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+[![CI Test Suite](https://github.com/MatthewJakubowski/aeternacore-enterprise-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/MatthewJakubowski/aeternacore-enterprise-suite/actions)
 [![Brand: FromPipetteToPython](https://img.shields.io/badge/Brand-%23FromPipetteToPython-0284c7?style=flat&logo=python)](https://mateusz-jakubowski.ai.studio/)
 [![Standard: PN-EN ISO 15189](https://img.shields.io/badge/Standard-PN--EN_ISO_15189:2023-10b981)](https://www.iso.org/standard/76677.html)
 [![Interoperability: HL7 FHIR R4](https://img.shields.io/badge/Interoperability-HL7_FHIR_R4-f59e0b)](https://hl7.org/fhir/R4/)
